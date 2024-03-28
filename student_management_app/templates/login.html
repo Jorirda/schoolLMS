@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load static %} 
+
+{% block content %}
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="heading-section">
+      <h2 class="heading-font">中之学校管理软件</h2>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="login-wrap py-5">
+      <form action="{% url 'doLogin' %}" method="POST">
+      {% csrf_token %}
+      <div class="img d-flex align-items-center justify-content-center" style="background-image:url('media/logoc.png')"></div>
+      <h3 class="text-center mb-0">欢迎</h3>
+        <div class="form-group">
+          <div class="icon d-flex align-items-center justify-content-center">
+            <span class="fa fa-user"></span>
+          </div>
+          <input
+            type="email"
+            class="form-control"
+            placeholder="电子邮件"
+            required=""
+            name="email"
+          />
+        </div>
+        <div class="form-group">
+          <div class="icon d-flex align-items-center justify-content-center">
+            <span class="fa fa-lock"></span>
+          </div>
+          <input
+            type="password"
+            class="form-control"
+            placeholder="密码"
+            required=""
+            name="password" 
+          />   
+        </div>
+        <!-- <div class="form-group d-md-flex">
+          <div class="w-100 text-md-right">
+            <a href="#">忘记密码了</a>
+          </div>
+        </div> -->
+        <div class="form-group">
+          <button type="submit" class="btn form-control btn-primary rounded submit px-3">登录</button>
+        </div>
+      </form>
+      <!-- <div class="w-100 text-center mt-4 text"> -->
+        <!-- <p class="mb-0">Don't have an account?</p> -->
+        <!-- <a href="#">注册</a>
+      </div> -->
+    </div>
+  </div>
+</div>
+<!--container-->
+
+{% endblock %}

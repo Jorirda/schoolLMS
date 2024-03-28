@@ -1,0 +1,8 @@
+// Step 1: Import Bootstrap's Sass files
+@import 'node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
+
+// Step 2: Override Bootstrap variables to customize button color
+$btn-primary-bg: #fc5f00; // Set your custom color here
+
+// Step 3: Compile Bootstrap with customized variables
+@import 'node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
